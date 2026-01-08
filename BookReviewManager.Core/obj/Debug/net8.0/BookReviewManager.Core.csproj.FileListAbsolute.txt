@@ -1,0 +1,11 @@
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Core\bin\Debug\net8.0\BookReviewManager.Core.deps.json
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Core\bin\Debug\net8.0\BookReviewManager.Core.dll
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Core\bin\Debug\net8.0\BookReviewManager.Core.pdb
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Core\obj\Debug\net8.0\BookReviewManager.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Core\obj\Debug\net8.0\BookReviewManager.Core.AssemblyInfoInputs.cache
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Core\obj\Debug\net8.0\BookReviewManager.Core.AssemblyInfo.cs
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Core\obj\Debug\net8.0\BookReviewManager.Core.csproj.CoreCompileInputs.cache
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Core\obj\Debug\net8.0\BookReviewManager.Core.dll
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Core\obj\Debug\net8.0\refint\BookReviewManager.Core.dll
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Core\obj\Debug\net8.0\BookReviewManager.Core.pdb
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Core\obj\Debug\net8.0\ref\BookReviewManager.Core.dll

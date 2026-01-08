@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "+xUL+E3uKQpRZzCvLQKNtphS7PNQzMTHfu+ZDBsCbM0=",
+  "Source": "BookReviewManager.API",
+  "BasePath": "_content/BookReviewManager.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

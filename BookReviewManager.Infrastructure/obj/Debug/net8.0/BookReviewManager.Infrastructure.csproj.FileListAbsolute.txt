@@ -1,0 +1,17 @@
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\obj\Debug\net8.0\BookReviewManager.Infrastructure.csproj.AssemblyReference.cache
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\obj\Debug\net8.0\BookReviewManager.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\obj\Debug\net8.0\BookReviewManager.Infrastructure.AssemblyInfoInputs.cache
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\obj\Debug\net8.0\BookReviewManager.Infrastructure.AssemblyInfo.cs
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\obj\Debug\net8.0\BookReviewManager.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\bin\Debug\net8.0\BookReviewManager.Infrastructure.deps.json
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\bin\Debug\net8.0\BookReviewManager.Infrastructure.runtimeconfig.json
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\bin\Debug\net8.0\BookReviewManager.Infrastructure.dll
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\bin\Debug\net8.0\BookReviewManager.Infrastructure.pdb
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\bin\Debug\net8.0\BookReviewManager.Core.dll
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\bin\Debug\net8.0\BookReviewManager.Core.pdb
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\obj\Debug\net8.0\BookRevi.C5B242D5.Up2Date
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\obj\Debug\net8.0\BookReviewManager.Infrastructure.dll
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\obj\Debug\net8.0\refint\BookReviewManager.Infrastructure.dll
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\obj\Debug\net8.0\BookReviewManager.Infrastructure.pdb
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\obj\Debug\net8.0\BookReviewManager.Infrastructure.genruntimeconfig.cache
+D:\Mentoria Estudos\Desafio\BookReviewManager\BookReviewManager.Infrastructure\obj\Debug\net8.0\ref\BookReviewManager.Infrastructure.dll

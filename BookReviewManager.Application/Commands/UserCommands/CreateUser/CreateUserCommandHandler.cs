@@ -26,7 +26,7 @@ namespace BookReviewManager.Application.Commands.UserCommands.CreateUser
         {
             var exists = await _userRepository.ExistsByEmailAsync(request.Email);
 
-            var user = new User(request.Email, request.Name);
+            var user = new User(request.Email, request.Name, request.Password, request.Role);
 
             await _userRepository.CreateAsync(user);
 

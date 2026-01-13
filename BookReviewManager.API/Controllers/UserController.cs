@@ -1,26 +1,32 @@
-﻿using BookReviewManager.Application.Commands.UserCommands.CreateUser;
+﻿using BookReviewManager.Application.Commands.LoginCommand;
+using BookReviewManager.Application.Commands.UserCommands.CreateUser;
 using BookReviewManager.Application.Commands.UserCommands.DeleteUsers;
 using BookReviewManager.Application.Commands.UserCommands.UpdateUser;
 using BookReviewManager.Application.Queries;
 using BookReviewManager.Application.Queries.UserQueries.GetAllUsers;
+using BookReviewManager.Infrastructure.Auth;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookReviewManager.API.Controllers
 {
-    [Route("api/users")]
     [ApiController]
+    [Route("api/users")]
+    //[Authorize]
     public class UsersController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly IAuthService _authService;
 
-        public UsersController(IMediator mediator)
+        public UsersController(IMediator mediator, IAuthService authService)
         {
             _mediator = mediator;
+            _authService = authService;
         }
 
         // GET api/users
         [HttpGet]
+        //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> Get()
         {
             var query = new GetAllUsersQuery();
@@ -51,8 +57,11 @@ namespace BookReviewManager.API.Controllers
 
         // POST api/users
         [HttpPost]
+        //[AllowAnonymous]
         public async Task<IActionResult> Post(CreateUserCommand command)
         {
+            var hash = _authService.ComputeHash(command.Password);
+            command.Password = hash;
             var result = await _mediator.Send(command);
 
             if (!result.IsSuccess)
@@ -82,6 +91,7 @@ namespace BookReviewManager.API.Controllers
 
         // DELETE api/users/123
         [HttpDelete("{id}")]
+        //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _mediator.Send(new DeleteUserCommand(id));
@@ -92,6 +102,17 @@ namespace BookReviewManager.API.Controllers
             }
 
             return NoContent();
+        }
+        [HttpPut("login")]
+        //[AllowAnonymous]
+        public async Task<IActionResult> Login(LoginUserCommand command)
+        {
+            var result = await _mediator.Send(command);
+
+            if (!result.IsSuccess)
+                return BadRequest(result.Message);
+
+            return Ok(result);
         }
     }
 }

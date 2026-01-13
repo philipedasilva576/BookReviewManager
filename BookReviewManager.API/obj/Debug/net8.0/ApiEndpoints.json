@@ -43,7 +43,7 @@
   },
   {
     "ContainingType": "BookReviewManager.API.Controllers.BooksController",
-    "Method": "UpdateCover",
+    "Method": "UpdateBookCover",
     "RelativePath": "api/books/{id}/cover",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -55,9 +55,9 @@
         "IsRequired": true
       },
       {
-        "Name": "command",
-        "Type": "BookReviewManager.Application.Commands.BookCommands.UpdateBookCover.UpdateBookCoverCommand",
-        "IsRequired": true
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -157,6 +157,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookReviewManager.API.Controllers.UsersController",
+    "Method": "Login",
+    "RelativePath": "api/users/login",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "BookReviewManager.Application.Commands.LoginCommand.LoginUserCommand",
         "IsRequired": true
       }
     ],

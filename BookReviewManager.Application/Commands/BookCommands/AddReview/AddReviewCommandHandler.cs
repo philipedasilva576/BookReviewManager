@@ -26,7 +26,8 @@ namespace BookReviewManager.Application.Commands.BookCommands.AddReview
                 book.AddReview(
                     request.UserId,
                     request.Grade,
-                    request.Description);
+                    request.Description,
+                    request.BookId);
 
                 await _bookRepository.UpdateAsync(book);
 

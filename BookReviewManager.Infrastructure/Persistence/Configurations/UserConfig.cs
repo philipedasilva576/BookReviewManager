@@ -12,24 +12,17 @@ namespace BookReviewManager.Infrastructure.Persistence.Configurations
 
             builder.HasKey(u => u.Id);
 
-            builder.Property(u => u.Email)
-                .IsRequired()
-                .HasMaxLength(150);
-
-            builder.HasIndex(u => u.Email)
-                .IsUnique();
-
             builder.Property(u => u.Name)
                 .IsRequired()
                 .HasMaxLength(150);
 
-            builder.Property(u => u.CreatedAt)
-                .IsRequired();
+            builder.Property(u => u.Email)
+                .IsRequired()
+                .HasMaxLength(200);
 
-            builder.HasMany<Review>()
+            builder.HasMany(u => u.Reviews)
                 .WithOne(r => r.User)
-                .HasForeignKey(r => r.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .HasForeignKey(r => r.UserId);
         }
     }
 }

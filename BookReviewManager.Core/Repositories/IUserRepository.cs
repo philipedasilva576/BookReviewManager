@@ -9,8 +9,9 @@ namespace BookReviewManager.Core.Repositories
 {
     public interface IUserRepository : IBaseRepository<User>
     {
-        Task<User?> GetByEmailAsync(string email);
+        Task<User?> GetByEmailAsync(string email, string password);
         Task<bool> ExistsByEmailAsync(string email);
         Task<bool> EmailAlreadyExistsAsync(string email, int userId);
+
     }
 }

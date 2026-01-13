@@ -3,11 +3,12 @@
     public class Review : BaseEntity
     {
         protected Review() { }
-        internal Review(int grade, string description, int userId)
+        public Review(int grade, string description, int userId, int bookId)
         {
             Grade = grade;
             Description = description;
             UserId = userId;
+            BookId = bookId;
         }
 
         public int Grade { get; private set; }

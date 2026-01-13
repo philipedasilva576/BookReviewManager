@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookReviewManager.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(BookReviewDbContext))]
-    [Migration("20260106200446_FirstMigration")]
+    [Migration("20260112170043_FirstMigration")]
     partial class FirstMigration
     {
         /// <inheritdoc />
@@ -110,17 +110,11 @@ namespace BookReviewManager.Infrastructure.Persistence.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserId1")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
+                    b.HasIndex("BookId");
+
                     b.HasIndex("UserId");
-
-                    b.HasIndex("UserId1");
-
-                    b.HasIndex("BookId", "UserId")
-                        .IsUnique();
 
                     b.ToTable("Reviews", (string)null);
                 });
@@ -138,18 +132,23 @@ namespace BookReviewManager.Infrastructure.Persistence.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
-                    b.HasKey("Id");
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("Email")
-                        .IsUnique();
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Users", (string)null);
                 });
@@ -163,14 +162,10 @@ namespace BookReviewManager.Infrastructure.Persistence.Migrations
                         .IsRequired();
 
                     b.HasOne("BookReviewManager.Core.Entities.User", "User")
-                        .WithMany()
+                        .WithMany("Reviews")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("BookReviewManager.Core.Entities.User", null)
-                        .WithMany("Reviews")
-                        .HasForeignKey("UserId1");
 
                     b.Navigation("Book");
 

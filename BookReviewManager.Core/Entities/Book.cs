@@ -48,7 +48,7 @@ namespace BookReviewManager.Core.Entities
         public IReadOnlyCollection<Review> Reviews => _reviews.AsReadOnly();
 
         // 🔥 MÉTODO DE DOMÍNIO
-        public void AddReview(int userId, int grade, string description)
+        public void AddReview(int userId, int grade, string description, int bookId)
         {
             // Regra 1: Nota válida
             if (grade < 1 || grade > 5)
@@ -59,7 +59,7 @@ namespace BookReviewManager.Core.Entities
                 throw new DomainException("Você já fez uma avaliação sobre esse livro.");
 
             //Regra 3: Criar Review dentro do agregado
-           var review = new Review(grade, description, userId);
+            var review = new Review(grade, description, userId, bookId);
 
             _reviews.Add(review);
 

@@ -11,15 +11,16 @@ namespace BookReviewManager.Infrastructure.Persistence.Repositories
         {
         }
 
-        public async Task<User?> GetByEmailAsync(string email)
+        public async Task<User?> GetByEmailAsync(string email, string password)
         {
-            return await _context.Users
-                .FirstOrDefaultAsync(u => u.Email == email);
+            return await _context.Users.AsNoTracking()
+                .FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
         }
 
         public async Task<bool> ExistsByEmailAsync(string email)
         {
             return await _context.Users
+                .AsNoTracking()
                 .AnyAsync(u => u.Email == email);
         }
 
